@@ -28,6 +28,10 @@ public class UserController {
 
     @PostMapping
     public void createUser(@RequestBody User user) {
+        if (user.getUserName() == null) {
+            throw new IllegalArgumentException("Username cannot be null");
+        }
+
         userService.saveEntry(user);
     }
 

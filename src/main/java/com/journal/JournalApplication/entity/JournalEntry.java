@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
-@Document
+@Document("journal_entries")
 @Data
 @NoArgsConstructor
 public class JournalEntry {
