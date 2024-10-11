@@ -32,7 +32,7 @@ public class JournalEntityController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping
+    @PostMapping("{userName}")
     public ResponseEntity<JournalEntry>  createEntry(@PathVariable String userName,
                                                      @RequestBody JournalEntry myEntry) {
         try {
